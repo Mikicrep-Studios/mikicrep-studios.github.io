@@ -16,6 +16,29 @@
             f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
             tp('register', 'zLPDp8AT64GNuxrx');
     </script>
+    <script> 
+        document.addEventListener('DOMContentLoaded', function() {
+            const trustpilot_invitation = {
+                   recipientEmail: 'john@gmail.com',
+                   recipientName: 'John',
+                   referenceId: 'Order_123',
+                   source: 'InvitationScript',
+                   productSkus: ['sku_1', 'sku_2'],
+                   products: [{
+                        sku: 'sku_1',
+                        productUrl: 'https://your_shop.com/product/1',
+                        imageUrl: 'https://your_shop.com/product/images/1',
+                        name: 'test_product_1',
+                    }, {
+                        sku: 'sku_2',
+                        productUrl: 'https://your_shop.com/product/2',
+                        imageUrl: 'https://your_shop.com/product/images/2',
+                        name: 'test_product_2',
+                    }],
+              };
+              tp('createInvitation', trustpilot_invitation);
+        });
+    </script>
 </head>
 
 <body>
