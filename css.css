@@ -154,3 +154,8 @@ footer {
   }
 
 }
+
+.statusbarframe {
+  width: 100%;
+  height:7%;
+}
