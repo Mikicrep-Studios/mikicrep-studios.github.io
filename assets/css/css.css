@@ -1,0 +1,108 @@
+/* Main elements */
+body {
+    background: rgb(56,56,56);
+    background: linear-gradient(90deg, rgba(30,30,30,1) 0%, rgba(56,56,56,1) 50%, rgba(30,30,30,1) 100%);
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #F8EEEC;
+}
+
+/* Links and disable highlight */
+a {
+    color: #F8EAAA;
+    text-decoration:none;
+}
+a:visited {
+    color:#F8EAAA;
+}
+
+.logininput, .loginbutton {
+    background-color: #777777;
+    height: 30px;
+
+    color: #F8EAAA;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.logininput::placeholder {
+    color: #000000;
+}
+
+/* Containers */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.notification {
+    margin-left: .5%;
+
+    width: 49%;
+    background-color: rgb(125, 125, 125);
+    border-radius: 25px;
+}
+
+.fullfield {
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+
+    width: 50%;
+    background-color: rgb(125, 125, 125);
+    border-radius: 10px;
+}
+.fullfieldimg {
+    width: 20%;
+    height: auto;
+
+    margin-right: 100%;
+    border-radius: 50px;
+}
+.fullfieldheader {
+    top: 0;
+    margin-left: 25%;
+}
+
+/* Status bar */
+.statusbar {
+    background-color: rgb(59, 59, 59);
+
+    border-radius: 50px;
+}
+
+iframe {
+    width: 100%;
+    height: 60px;
+
+    border: none;
+}
+
+.statusbarbutton {
+    background-color: #777777;
+    height: 30px;
+    width: 120px;
+
+    border: solid black 2px;
+    border-radius: 50px;
+}
+
+.statusbarbutton:hover {
+    background-color: #666666;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-weight: bold;
+
+    background-color: rgb(59, 59, 59);
+
+    border-radius: 50px;
+    
+}
