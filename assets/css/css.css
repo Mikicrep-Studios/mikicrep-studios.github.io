@@ -9,6 +9,13 @@ body {
     color: #F8EEEC;
 }
 
+iframe {
+    width: 100%;
+    height: 60px;
+
+    border: none;
+}
+
 /* Links and disable highlight */
 a {
     color: #F8EAAA;
@@ -74,13 +81,6 @@ a:visited {
     border-radius: 50px;
 }
 
-iframe {
-    width: 100%;
-    height: 60px;
-
-    border: none;
-}
-
 .statusbarbutton {
     background-color: #777777;
     height: 30px;
@@ -105,4 +105,10 @@ footer {
 
     border-radius: 50px;
     
+}
+
+/* Gallery */
+.galleryimg {
+    width: 33%;
+    height: 33%;
 }
