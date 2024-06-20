@@ -5,6 +5,9 @@ window.addEventListener('message', function(event) {
     if (event.data === 'index') {
         window.location.href = '/';
     }
+    if (event.data === 'projects') {
+        window.location.href = '/projects.html';
+    }
     if (event.data === 'a40gallery') {
         window.location.href = '/a40gallery.html';
     }
