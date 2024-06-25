@@ -8,7 +8,7 @@ window.addEventListener('message', function(event) {
     if (event.data === 'projects') {
         window.location.href = '/projects.html';
     }
-    if (event.data === 'a40gallery') {
-        window.location.href = '/a40gallery.html';
+    if (event.data === 'artgallery') {
+        window.location.href = '/artgallery.html';
     }
 });
