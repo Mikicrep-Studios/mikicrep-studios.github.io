@@ -54,6 +54,7 @@ a:visited {
 }
 
 .fullfield {
+    /*TODO*/
     margin: auto;
     padding-top: 5px;
     padding-left: 5px;
@@ -62,7 +63,18 @@ a:visited {
     background-color: rgb(125, 125, 125);
     border-radius: 10px;
 }
+
+.fullfieldcompact {
+    margin-left: 2%;
+    margin-right: 2%;
+
+    width: 25%;
+    background-color: rgb(125, 125, 125);
+    border-radius: 10px;
+}
+
 .fullfieldimg {
+    /*TODO*/
     width: 20%;
     height: auto;
 
@@ -109,6 +121,7 @@ footer {
 
 /* Gallery */
 .galleryimg {
-    width: 33%;
-    height: 33%;
+    width: 50%;
+    height: 50%;
+    padding-bottom: 5%;
 }
