@@ -125,3 +125,10 @@ footer {
     height: 50%;
     padding-bottom: 5%;
 }
+
+/* Additional */
+hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid #777777;
+}
