@@ -1,0 +1,42 @@
+/* 
+Here are unused css elements or old styles which i may sometime use again or never again.
+I will put them here in order to lower actual css file and make loading faster
+*/
+
+.logininput, .loginbutton {
+    background-color: #777777;
+    height: 30px;
+
+    color: #F8EAAA;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+.logininput::placeholder {
+    color: #000000;
+}
+
+.fullfield {
+    /*TODO*/
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+
+    width: 50%;
+    background-color: rgb(125, 125, 125);
+    border-radius: 10px;
+}
+
+.fullfieldimg {
+    /*TODO*/
+    width: 20%;
+    height: auto;
+
+    margin-right: 100%;
+    border-radius: 50px;
+}
+
+.fullfieldheader {
+    top: 0;
+    margin-left: 25%;
+}

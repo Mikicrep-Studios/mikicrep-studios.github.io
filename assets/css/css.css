@@ -25,18 +25,6 @@ a:visited {
     color:#F8EAAA;
 }
 
-.logininput, .loginbutton {
-    background-color: #777777;
-    height: 30px;
-
-    color: #F8EAAA;
-    border: solid black 2px;
-    border-radius: 5px;
-}
-.logininput::placeholder {
-    color: #000000;
-}
-
 /* Containers */
 .container {
     display: flex;
@@ -49,19 +37,8 @@ a:visited {
     margin-left: .5%;
 
     width: 49%;
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(115, 115, 115);
     border-radius: 25px;
-}
-
-.fullfield {
-    /*TODO*/
-    margin: auto;
-    padding-top: 5px;
-    padding-left: 5px;
-
-    width: 50%;
-    background-color: rgb(125, 125, 125);
-    border-radius: 10px;
 }
 
 .fullfieldcompact {
@@ -69,21 +46,18 @@ a:visited {
     margin-right: 2%;
 
     width: 25%;
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(115, 115, 115);
+
+    /*
+    EXPERIMENTAL STYLE; if you ever see this uncomment this and comment background color and tell me how it looks, also tweak it and tell what looks best;
+    Dont forget to delete this text;
+
+    border-color: rgb(100, 100, 100);
+    border-width: 3px;
+    border-style: solid;
+    */
+    
     border-radius: 10px;
-}
-
-.fullfieldimg {
-    /*TODO*/
-    width: 20%;
-    height: auto;
-
-    margin-right: 100%;
-    border-radius: 50px;
-}
-.fullfieldheader {
-    top: 0;
-    margin-left: 25%;
 }
 
 /* Status bar */
