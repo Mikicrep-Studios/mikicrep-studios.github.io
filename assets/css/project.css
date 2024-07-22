@@ -1,0 +1,9 @@
+.features {
+    list-style-position: inside;
+    padding-right: 75px;
+}
+
+.bigp {
+    font-size: large;
+    font-weight: bold;
+}
