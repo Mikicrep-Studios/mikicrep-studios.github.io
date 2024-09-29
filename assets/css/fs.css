@@ -1,0 +1,17 @@
+.fsbutton {
+    width: 10%;
+    font-size: large;
+}
+
+.filediv {
+    width: 40%;
+
+    background-color: #555555;
+    
+
+    border-radius: 25px;
+}
+
+.filepbold {
+    font-weight: 600;
+}

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/css/css.css">
+        <link rel="stylesheet" href="/assets/css/fs.css">
+        <title>Mikicrep Studios | RSG File</title>
+		<link rel="icon" type="image/x-icon" href="/assets/pics/favicon.ico">
+    </head>
+    <body>
+	<iframe src="/statusbar.html" scrolling="no"></iframe>
+        <h3>Mikicrep Studios - Docs File</h3>
+        <h4>/source/player/playercontrols.cpp - Explanation</h4>
+
+        <div class="container">
+            <div class="filediv">
+                <p class="filep">This file is used to handle mouse click functions</p>
+                <p class="filepbold">Refrenced in mouse.h</p>
+
+                <h4>mouse::Event()</h4>
+                <ul>
+                    <li>This function handles placing blocks and quick color picker</li>
+                </ul>
+                <br>
+                <ol>
+                    <li>If left click is pressed then place block on current mouse position</li>
+                    <br>
+                    <li>If right click is pressed then destroy block on current mouse position</li>
+                    <br>
+                    <li>If color picker is active and left click is pressed then get color from current mouse position</li>
+                </ol>
+                <br>
+                
+                <h4>mouse::Overlay()</h4>
+                <ul>
+                    <li>This function handles drawing of mouse highlight</li>
+                </ul>
+                <br>
+                <ol>
+                    <li>If background color is not white then draw white highlight on current mouse position</li>
+                    <br>
+                    <li>If background color is white then draw black highlight on current mouse position</li>
+                    <br>
+                    <li>If camera highlighting is enabled and background color is not light red then draw light red highlight on current mouse position</li>
+                    <br>
+                    <li>If camera highlighting is enabled and background color is light red then draw dark red highlight on current mouse position</li>
+                </ol>
+                <br>
+                <br>
+
+                <p class="filepbold">Notes:</p>
+                <ul>
+                    <li>SDL_Rect mouseRect = {curHoverX * cam.scale, curHoverY * cam.scale, cam.scale, cam.scale} is used to calculate on which block is mouse currently hovering</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+        <button><a href="ls.html">Go back</a></button>
+
+        <br>
+		<iframe src="/footer.html" scrolling="no"></iframe>
+        <script src="/global.js"></script>
+	</body>
+</html>

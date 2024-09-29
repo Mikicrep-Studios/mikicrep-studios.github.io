@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/css/css.css">
+        <link rel="stylesheet" href="/assets/css/fs.css">
+        <title>Mikicrep Studios | RSG File</title>
+		<link rel="icon" type="image/x-icon" href="/assets/pics/favicon.ico">
+    </head>
+    <body>
+	<iframe src="/statusbar.html" scrolling="no"></iframe>
+        <h3>Mikicrep Studios - Docs File</h3>
+        <h4>/source/player/playermovement.cpp - Explanation</h4>
+
+        <div class="container">
+            <div class="filediv">
+                <p class="filep">This file is used to handle pressing WASD to move player</p>
+                <p class="filepbold">Refrenced in player.h</p>
+
+                <h4>player::Movement()</h4>
+                <ul>
+                    <li>This function handles WASD keys</li>
+                    <br>
+                    <ul>
+                        <li>W moves up</li>
+                        <br>
+                        <li>A moves left</li>
+                        <br>
+                        <li>S moves down</li>
+                        <br>
+                        <li>D moves right</li>
+                    </ul>
+                </ul>
+                <br>
+                <ol>
+                    <li>Detects if W/A/S/D key pressed</li>
+                    <br>
+                    <li>Checks if target block is solid</li>
+                    <br>
+                    <li>Checks if player will go off bounds of map</li>
+                    <br>
+                    <li>Check if player is standing on color 0 (air), if yes then set air on that block</li>
+                    <br>
+                    <li>If not then player is standing on solid block (because it is impossible to get block with color 0 and destroying block sets color back to 0) and then places block</li>
+                    <br>
+                    <li>Player changes position</li>
+                </ol>
+            </div>
+        </div>
+
+        <br>
+        <button><a href="ls.html">Go back</a></button>
+        
+        <br>
+		<iframe src="/footer.html" scrolling="no"></iframe>
+        <script src="/global.js"></script>
+	</body>
+</html>
