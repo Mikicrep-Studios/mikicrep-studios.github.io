@@ -122,6 +122,13 @@ hr {
     border: 0;
     border-top: 1px solid #777777;
 }
+.blackhr {
+    border-top: 1px solid #666666;
+}
+
+.notifdata {
+    color: darkgray;
+}
 
 .socialsiframe {
     height: 64px;
