@@ -1,3 +1,5 @@
+// projectdata.js
+
 const projects = [
     { title: "Pinned:", items: [
         { name: "Random SDL Game", link: "/projects/rsg.html", description: "Game for lowend PCs" }
