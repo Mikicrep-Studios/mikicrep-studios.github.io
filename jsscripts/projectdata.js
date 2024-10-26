@@ -5,6 +5,7 @@ const projects = [
         { name: "Random SDL Game", link: "/projects/rsg.html", description: "Game for lowend PCs" }
     ]},
     { title: "Projects:", items: [
+        { name: "Git HTTP To SSH", link: "/projects/ghts.html", description: "CLI tool" },
         { name: "Part summoner simulator", link: "/projects/pss.html", description: "Roblox game" },
         { name: "Random Gibberish Generator", link: "/projects/rgg.html", description: "CLI tool" },
         { name: "Neofetch", link: "/projects/neofetch.html", description: "CLI tool" },
