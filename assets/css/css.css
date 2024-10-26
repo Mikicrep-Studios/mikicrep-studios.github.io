@@ -39,10 +39,18 @@ a:hover {
 
 /* Containers */
 .container {
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;*/
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap; /* Allow images to wrap onto new rows */
+    max-width: 80%; /* Prevent row overflow and keep images uniform */
+    margin: auto; /* Center the gallery container */
 }
 
 .notification {

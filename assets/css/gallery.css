@@ -1,5 +1,7 @@
 .galleryimg {
-    width: 50%;
-    height: 50%;
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
     border-radius: 5px;
+    margin: 10px; /* Space between images */
+    object-fit: cover; /* Ensures image fits within the set dimensions */
 }
