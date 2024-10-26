@@ -112,14 +112,6 @@ footer {
     
 }
 
-/* Gallery */
-.galleryimg {
-    width: 50%;
-    height: 50%;
-    padding-bottom: 5%;
-    border-radius: 5px;
-}
-
 /* Additional */
 hr {
     display: block;
