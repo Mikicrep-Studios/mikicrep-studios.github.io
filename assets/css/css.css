@@ -139,3 +139,7 @@ hr {
 .socialsiframe {
     height: 64px;
 }
+
+.redwarning {
+    background-color: red;
+}
