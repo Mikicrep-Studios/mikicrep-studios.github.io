@@ -1,6 +1,7 @@
 // gallerydata.js
 
 const galleryImages = [
+    { original: "/assets/artgallery/original/10.png", webp: "/assets/artgallery/webp/10.webp" },
     { original: "/assets/artgallery/original/9.png", webp: "/assets/artgallery/webp/9.webp" },
     { original: "/assets/artgallery/original/8.png", webp: "/assets/artgallery/webp/8.webp" },
     { original: "/assets/artgallery/original/7.png", webp: "/assets/artgallery/webp/7.webp" },
