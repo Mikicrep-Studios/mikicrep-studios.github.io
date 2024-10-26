@@ -60,14 +60,11 @@ a:hover {
     width: 25%;
     background-color: rgb(115, 115, 115);
 
-    /*
-    EXPERIMENTAL STYLE; if you ever see this uncomment this and comment background color and tell me how it looks, also tweak it and tell what looks best;
-    Dont forget to delete this text;
-
     border-color: rgb(100, 100, 100);
+    border-color: #666666;
     border-width: 3px;
     border-style: solid;
-    */
+    
     
     border-radius: 10px;
 }
