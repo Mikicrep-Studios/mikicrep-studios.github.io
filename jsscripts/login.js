@@ -2,30 +2,27 @@ function sumbit() {
   const user = document.getElementById('user').value.toLowerCase();
   const pass = document.getElementById('pass').value;
 
-  const postdata = {
-    username: '',
-    password: ''
-  }; // TODO
-  
-  url = apiSite + "login/" + user + "/" + pass;
+  const callbackName = "handleResponse";
+  const url = `http://194.163.137.150:6969/login/${user}/${pass}?callback=${callbackName}`;
 
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(postdata)
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+  // Define the callback function to handle the response
+  window[callbackName] = function (data) {
+    console.log("Response received:", data);  // Log the full response
+
+    if (Array.isArray(data) && data.length > 0) {
+      const result = `Username: ${user}, ID: ${data[0].id}, Notes: ${data[0].notes}`;
+      document.getElementById('result').textContent = result;
+    } else {
+      document.getElementById('result').textContent = "No matching user found.";
     }
-    
-    return response.json();
-  })
-  .then(data => {
-    const result = "Username: " + user + " ID: " + data[0].id + ", Notes: " + data[0].notes;
-    console.log(data);
-    document.getElementById('result').textContent = result;
-  })
+
+    // Clean up: Remove the script tag and delete the callback function
+    document.body.removeChild(script);
+    delete window[callbackName];
+  };
+
+  // Create a script tag to make the request
+  const script = document.createElement('script');
+  script.src = url;
+  document.body.appendChild(script);
 }
