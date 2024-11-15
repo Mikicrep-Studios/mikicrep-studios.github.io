@@ -12,3 +12,5 @@ window.addEventListener('message', function(event) {
         window.location.href = '/artgallery.html';
     }
 });
+
+var apiSite = "http://194.163.137.150:6969/"
