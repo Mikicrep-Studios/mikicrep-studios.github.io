@@ -13,5 +13,5 @@ window.addEventListener('message', function(event) {
     }
 });
 
-var apiSite = "https://194.163.137.150:6969/"
-//var apiSite = "https://127.0.0.1:6969/" // Home sweet home ;)
+var apiSite = "http://194.163.137.150:6969/"
+//var apiSite = "http://127.0.0.1:6969/" // Home sweet home ;)
