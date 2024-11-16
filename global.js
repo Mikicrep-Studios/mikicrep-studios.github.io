@@ -11,6 +11,12 @@ window.addEventListener('message', function(event) {
     if (event.data === 'artgallery') {
         window.location.href = '/artgallery.html';
     }
+    if (event.data === 'login') {
+        window.location.href = '/login.html';
+    }
+    if (event.data === 'register') {
+        window.location.href = '/register.html';
+    }
 });
 
 var apiSite = "http://194.163.137.150:6969/"
