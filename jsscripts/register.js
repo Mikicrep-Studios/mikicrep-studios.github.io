@@ -1,17 +1,8 @@
-async function hashToSHA256(input) {
-  const encoder = new TextEncoder(); // Encode the input to Uint8Array
-  const data = encoder.encode(input);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data); // Hash the data
-  const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert bytes to hex
-  return hashHex;
-}
-
-async function sumbit() {
+function sumbit() {
     const user = document.getElementById('user').value.toLowerCase();
     const pass = document.getElementById('pass').value;
     const passconfirm = document.getElementById('passconfirm').value;
-    const passhash = await hashToSHA256(pass);
+    const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
 
     if(pass == passconfirm) {
       const callbackName = "handleResponse";
