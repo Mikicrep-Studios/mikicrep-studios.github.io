@@ -3,7 +3,7 @@ function sumbit() {
   const pass = document.getElementById('pass').value;
 
   const callbackName = "handleResponse";
-  const url = `http://194.163.137.150:6969/login/${user}/${pass}?callback=${callbackName}`;
+  const url = `${apiSite}login/${user}/${pass}?callback=${callbackName}`;
 
   // Define the callback function to handle the response
   window[callbackName] = function (data) {
