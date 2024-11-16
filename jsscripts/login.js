@@ -1,9 +1,19 @@
-function sumbit() {
+async function hashToSHA256(input) {
+  const encoder = new TextEncoder(); // Encode the input to Uint8Array
+  const data = encoder.encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data); // Hash the data
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert buffer to byte array
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert bytes to hex
+  return hashHex;
+}
+
+async function sumbit() {
   const user = document.getElementById('user').value.toLowerCase();
   const pass = document.getElementById('pass').value;
+  const passhash = await hashToSHA256(pass);
 
   const callbackName = "handleResponse";
-  const url = `${apiSite}login/${user}/${pass}?callback=${callbackName}`;
+  const url = `${apiSite}login/${user}/${passhash}?callback=${callbackName}`;
 
   // Define the callback function to handle the response
   window[callbackName] = function (data) {
