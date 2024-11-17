@@ -1,27 +1,49 @@
 function sumbit() {
-    const user = document.getElementById('user').value.toLowerCase();
-    const pass = document.getElementById('pass').value;
-    const passconfirm = document.getElementById('passconfirm').value;
-    const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
+  const user = document.getElementById('user').value.toLowerCase();
+  const pass = document.getElementById('pass').value;
+  const passconfirm = document.getElementById('passconfirm').value;
+  const captchacode = document.getElementById('vercode').value;
 
-    if(pass == passconfirm) {
-      const callbackName = "handleResponse";
-      const url = `${apiSite}register/${user}/${passhash}?callback=${callbackName}`;
-  
-      // Define the callback function to handle the response
-      window[callbackName] = function () {
-        console.log("Request sent, no data expected in response.");
-      };
-    
-      // Create a script tag to make the JSONP request
-      const script = document.createElement('script');
-      script.src = url;
-      document.body.appendChild(script);
-    
-      // Clean up the script tag after sending the request
-      script.onload = function () {
-        document.body.removeChild(script);
-        delete window[callbackName];
-      };
+  const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
+
+  if (pass == passconfirm) {
+      const url = `${apiSite}register/${user}/${passhash}/${captchacode}`;
+
+      // Send the request using fetch
+      fetch(url)
+          .then(response => response.json()) // Parse JSON response
+          .then(data => {
+              console.log("Response received:", data);
+              // Display the response message in the paragraph with ID 'result'
+              document.getElementById("result").textContent = data.message || "No message in response.";
+          })
+          .catch(error => {
+              console.error("Error:", error);
+              document.getElementById("result").textContent = "An error occurred. Please try again.";
+          });
+  } else {
+      document.getElementById("result").textContent = "Passwords do not match!";
   }
+}
+
+
+function sendcode() {
+  const username = document.getElementById('sendusername').value.toLowerCase();
+  const discordID = document.getElementById('sendcode').value;
+
+  const url = `${apiSite}linkdiscord/${username}/${discordID}`;
+
+  fetch(url, {
+    method: 'GET',
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log("Request sent successfully!");
+      } else {
+        console.error(`Request failed with status: ${response.status}`);
+      }
+    })
+    .catch(error => {
+      console.error("An error occurred:", error);
+    });
 }

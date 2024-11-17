@@ -9,18 +9,32 @@
         <h3>Mikicrep Studios - Register</h3>
         <h4>Here you can create your Mikicrep Studios account</h4>
         <hr>
-
-        <input type="text" class="logininput" id="user" placeholder="Username">
-        <input type="password" class="logininput" id="pass" placeholder="Password">
-        <input type="password" class="logininput" id="passconfirm" placeholder="Confirm">
-        <button class="loginbutton" onclick="sumbit()"><a href="/login.html">Sumbit</a></button>
+        <input type="text" class="logininput" id="sendusername" placeholder="Username for account">
+        <input type="text" class="logininput" id="sendcode" placeholder="Discord ID">
+        <button class="loginbutton" onclick="sendcode()"><a>Sumbit</a></button>
         <br><br>
 
         <div class="container">
             <div class="notification">
-                <p>!!! THIS IS PAGE FOR MAKING ACCOUNTS !!!</p>
-                <p>You will be redirected, make sure to enter correct info</p>
-                <p>You cant have same username as anyone</p>
+                <p>Use this to get verification code for below</p>
+                <p>We will DM you with verification code, make sure that your DMs are open or DM Mikicrep Studios bot first</p>
+                <p>Make sure that you are in our <a href="https://discord.gg/DdaGyeWp9U">Discord server</a></p>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <input type="text" class="logininput" id="user" placeholder="Username">
+        <input type="password" class="logininput" id="pass" placeholder="Password">
+        <input type="password" class="logininput" id="passconfirm" placeholder="Confirm">
+        <input type="text" class="logininput" id="vercode" placeholder="Discord verification code">
+        <button class="loginbutton" onclick="sumbit()"><a>Sumbit</a></button>
+        <br><br>
+
+        <div class="container">
+            <div class="notification">
+                <p id="result">After you entered your data, click sumbit button</p>
             </div>
         </div>
         <br>
