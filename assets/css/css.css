@@ -37,6 +37,24 @@ a:hover {
     color: #ffe46c;
 }
 
+input {
+    transition: all 250ms ease-in-out;
+    
+    height: 30px;
+    font-size: 15px;
+
+    color: white;
+    background-color: #777777;
+
+    border: solid black 2px;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgb(44, 44, 44);
+}
+input::placeholder {
+    color: darkgray;
+}
+
+
 /* Containers */
 .container {
     /*display: flex;
