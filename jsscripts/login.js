@@ -3,27 +3,46 @@ function sumbit() {
   const pass = document.getElementById('pass').value;
   const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
 
-  const callbackName = "handleResponse";
-  const url = `${apiSite}login/${user}/${passhash}?callback=${callbackName}`;
+  const url = `${apiSite}login/${user}/${passhash}`;
 
-  // Define the callback function to handle the response
-  window[callbackName] = function (data) {
-    console.log("Response received:", data);  // Log the full response
+  // Use fetch to make a request to the server
+  fetch(url)
+    .then(response => response.json())  // Parse the response as JSON
+    .then(data => {
+      console.log("Response received:", data);  // Log the full response
 
-    if (Array.isArray(data) && data.length > 0) {
-      const result = `Username: ${user}, ID: ${data[0].id}, Notes: ${data[0].notes}`;
-      document.getElementById('result').textContent = result;
-    } else {
-      document.getElementById('result').textContent = "No matching user found.";
-    }
+      if (Array.isArray(data) && data.length > 0) {
+        const result = `Username: ${user}, ID: ${data[0].id}, Notes: ${data[0].notes}`;
+        document.getElementById('result').textContent = result;
+      } else {
+        document.getElementById('result').textContent = "No matching user found.";
+      }
+    })
+    .catch(error => {
+      console.error("Error occurred:", error);
+      document.getElementById('result').textContent = "An error occurred while processing the login.";
+    });
+}
 
-    // Clean up: Remove the script tag and delete the callback function
-    document.body.removeChild(script);
-    delete window[callbackName];
-  };
+function linkacc() {
+  const user = document.getElementById('user').value.toLowerCase();
+  const pass = document.getElementById('pass').value;
+  const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
+  const captcha = document.getElementById('captcha').value;
 
-  // Create a script tag to make the request
-  const script = document.createElement('script');
-  script.src = url;
-  document.body.appendChild(script);
+  const url = `${apiSite}updatediscord/${user}/${passhash}/${captcha}`;
+
+  // Use fetch to make a request to the server
+  fetch(url)
+    .then(response => response.json())  // Parse the response as JSON
+    .then(data => {
+      console.log("Response received:", data);  // Log the full response
+
+      // Display the message in the paragraph with id 'accresult'
+      document.getElementById('accresult').textContent = data.message;
+    })
+    .catch(error => {
+      console.error("Error occurred:", error);
+      document.getElementById('accresult').textContent = "An error occurred while processing the data.";
+    });
 }
