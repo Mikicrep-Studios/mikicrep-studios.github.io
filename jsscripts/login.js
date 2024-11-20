@@ -1,4 +1,21 @@
-function sumbit() {
+const username = localStorage.getItem('user');
+const password = localStorage.getItem('pass');
+
+if (username && password) {
+  document.getElementById('user').value = username.toLowerCase();
+  document.getElementById('pass').value = password;
+  
+  sumbitwr();
+
+  document.getElementById('user').remove();
+  document.getElementById('pass').remove();
+  document.getElementById('login').remove();
+}
+else {
+  document.getElementById('logout').remove();
+}
+
+function sumbitwr() {
   const user = document.getElementById('user').value.toLowerCase();
   const pass = document.getElementById('pass').value;
   const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
@@ -14,6 +31,10 @@ function sumbit() {
       if (Array.isArray(data) && data.length > 0) {
         const result = `Username: ${user}, ID: ${data[0].id}, Notes: ${data[0].notes}`;
         document.getElementById('result').textContent = result;
+
+        localStorage.setItem('user', user);
+        localStorage.setItem('pass', pass);
+
       } else {
         document.getElementById('result').textContent = "No matching user found.";
       }
@@ -22,6 +43,16 @@ function sumbit() {
       console.error("Error occurred:", error);
       document.getElementById('result').textContent = "An error occurred while processing the login.";
     });
+}
+
+function sumbit() {
+  const user = document.getElementById('user').value.toLowerCase();
+  const pass = document.getElementById('pass').value;
+  
+  localStorage.setItem('user', user);
+  localStorage.setItem('pass', pass);
+
+  location.reload(true);
 }
 
 function linkacc() {
@@ -45,4 +76,11 @@ function linkacc() {
       console.error("Error occurred:", error);
       document.getElementById('accresult').textContent = "An error occurred while processing the data.";
     });
+}
+
+function clearCredentials() {
+  localStorage.removeItem('user');
+  localStorage.removeItem('pass');
+
+  location.reload(true);
 }
