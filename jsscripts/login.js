@@ -7,8 +7,6 @@ if (username && password) {
   
   sumbitwr();
 
-  document.getElementById('user').remove();
-  document.getElementById('pass').remove();
   document.getElementById('login').remove();
 }
 else {
