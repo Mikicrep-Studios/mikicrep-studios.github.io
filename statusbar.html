@@ -9,8 +9,10 @@
             <button class="statusbarbutton"><a href="#" onclick="window.parent.postMessage('index', '*')">Home</a></button>
             <button class="statusbarbutton"><a href="#" onclick="window.parent.postMessage('projects', '*')">Projects</a></button>
             <button class="statusbarbutton"><a href="#" onclick="window.parent.postMessage('artgallery', '*')">Art Gallery</a></button>
-            <button class="statusbarbutton"><a href="#" onclick="window.parent.postMessage('login', '*')">Login</a></button>
-            <button class="statusbarbutton"><a href="#" onclick="window.parent.postMessage('register', '*')">Register</a></button>
+            <button class="statusbarbutton" id="login"><a href="#" id="logina" onclick="window.parent.postMessage('login', '*')">Login</a></button>
+            <button class="statusbarbutton" id="register"><a href="#" onclick="window.parent.postMessage('register', '*')">Register</a></button>
         </div>
+        
+        <script src="jsscripts/statusbar.js"></script>
     </body>
 </html>
