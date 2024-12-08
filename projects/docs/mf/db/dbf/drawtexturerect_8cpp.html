@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mikicrep Framework: miki-framework/mf/graphics.h File Reference</title>
+<title>Mikicrep Framework: miki-framework/graphics/drawtexturerect.cpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -83,7 +83,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_0c1636cc33356c06965c8b759e40cde8.html">miki-framework</a></li><li class="navelem"><a class="el" href="../../dir_7b0399cc1f845a9c6e1b34970036c0c2.html">mf</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_0c1636cc33356c06965c8b759e40cde8.html">miki-framework</a></li><li class="navelem"><a class="el" href="../../dir_869fc2edc15c9234036dde10a025de51.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -91,14 +91,12 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">graphics.h File Reference</div></div>
+  <div class="headertitle"><div class="title">drawtexturerect.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;SDL_ttf.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="../../d5/dc4/core_8h_source.html">mf/core.h</a>&quot;</code><br />
-</div>
-<p><a href="../../d7/d04/graphics_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+<div class="textblock"><code>#include &quot;SDL.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/dd8/colors_8h_source.html">mf/colors.h</a>&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html">draw</a></td></tr>
@@ -107,20 +105,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a47ed218c3a1917f6958f6d43247de0b0" id="r_a47ed218c3a1917f6958f6d43247de0b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a47ed218c3a1917f6958f6d43247de0b0">draw::SetDrawColor</a> (SDL_Renderer *renderer, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color)</td></tr>
-<tr class="separator:a47ed218c3a1917f6958f6d43247de0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bb79d11848aa97911775cdd12fca90f" id="r_a6bb79d11848aa97911775cdd12fca90f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a6bb79d11848aa97911775cdd12fca90f">draw::DrawButton</a> (SDL_Renderer *renderer, SDL_Rect rect, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color, int mouseX, int mouseY)</td></tr>
-<tr class="separator:a6bb79d11848aa97911775cdd12fca90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a13233777eb544ff1d2b092b172db83" id="r_a8a13233777eb544ff1d2b092b172db83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a8a13233777eb544ff1d2b092b172db83">draw::DrawRect</a> (SDL_Renderer *renderer, SDL_Rect rect, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color)</td></tr>
-<tr class="separator:a8a13233777eb544ff1d2b092b172db83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c49fd83b7ff6092c47acfb0cbc72c19" id="r_a5c49fd83b7ff6092c47acfb0cbc72c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a5c49fd83b7ff6092c47acfb0cbc72c19">draw::DrawTransRect</a> (SDL_Renderer *renderer, SDL_Rect rect, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color, int colorA)</td></tr>
-<tr class="separator:a5c49fd83b7ff6092c47acfb0cbc72c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75f2625456c6793af020760ff869bb70" id="r_a75f2625456c6793af020760ff869bb70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a75f2625456c6793af020760ff869bb70">draw::DrawShakingRect</a> (SDL_Renderer *renderer, SDL_Rect rect, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color, int intensity)</td></tr>
-<tr class="separator:a75f2625456c6793af020760ff869bb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39058e0c15c04c4e29db0d905ac2b44c" id="r_a39058e0c15c04c4e29db0d905ac2b44c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a39058e0c15c04c4e29db0d905ac2b44c">draw::DrawTextureRect</a> (SDL_Renderer *renderer, SDL_Rect rect, SDL_Texture *texture)</td></tr>
 <tr class="separator:a39058e0c15c04c4e29db0d905ac2b44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578bc027371215cd91e20b154a7fd18c" id="r_a578bc027371215cd91e20b154a7fd18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d00/namespacedraw.html#a578bc027371215cd91e20b154a7fd18c">draw::DrawText</a> (SDL_Renderer *renderer, TTF_Font *font, SDL_Rect rect, const char *text, <a class="el" href="../../db/d6a/structMF__Color.html">MF_Color</a> color)</td></tr>
-<tr class="separator:a578bc027371215cd91e20b154a7fd18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
