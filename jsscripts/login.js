@@ -6,8 +6,6 @@ if (username && password) {
   document.getElementById('pass').value = password;
   
   sumbitwr();
-
-  document.getElementById('login').remove();
 }
 else {
   document.getElementById('logout').remove();
@@ -27,14 +25,21 @@ function sumbitwr() {
       console.log("Response received:", data);  // Log the full response
 
       if (Array.isArray(data) && data.length > 0) {
+        // If login is successful, display the user's information
         const result = `Username: ${user}, ID: ${data[0].id}, Notes: ${data[0].notes}`;
         document.getElementById('result').textContent = result;
 
         localStorage.setItem('user', user);
         localStorage.setItem('pass', pass);
 
+        document.getElementById('login').remove(); // User doesnt need login button because successful login
+
       } else {
+        // If login is unsuccessful, display a message and clear the credentials
+        softClearCredentials();
         document.getElementById('result').textContent = "No matching user found.";
+
+        document.getElementById('logout').remove(); // User doesnt need logout button because unsuccessful login
       }
     })
     .catch(error => {
@@ -74,6 +79,11 @@ function linkacc() {
       console.error("Error occurred:", error);
       document.getElementById('accresult').textContent = "An error occurred while processing the data.";
     });
+}
+
+function softClearCredentials() {
+  localStorage.removeItem('user');
+  localStorage.removeItem('pass');
 }
 
 function clearCredentials() {
