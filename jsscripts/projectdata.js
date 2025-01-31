@@ -2,10 +2,11 @@
 
 const projects = [
     { title: "Pinned:", items: [
+        { name: "Mikicrep Framework", link: "/projects/mf.html", description: "Framework/Game engine" },
         { name: "Random SDL Game", link: "/projects/rsg.html", description: "Game for lowend PCs" }
     ]},
     { title: "Projects:", items: [
-        { name: "Mikicrep Framework", link: "/projects/mf.html", description: "Framework/Game engine" },
+        { name: "Rotten Cheese Defence", link: "/projects/rcd.html", description: "Game" },
         { name: "Angry AI", link: "/projects/aai.html", description: "Game" },
         { name: "Git HTTP To SSH", link: "/projects/ghts.html", description: "CLI tool" },
         { name: "Part summoner simulator", link: "/projects/pss.html", description: "Roblox game" },
