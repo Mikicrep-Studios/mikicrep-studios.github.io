@@ -28,6 +28,8 @@ function sumbitwr() {
         // If login is successful, display the user's information
         const result = `Username: ${user}, ID: ${data[0].id}, Mikicoins: ${data[0].mikicoins}, Notes: ${data[0].notes}`;
         document.getElementById('result').textContent = result;
+        const mikicoins = 'Mikicoins: ' + data[0].mikicoins + '$M';
+        document.getElementById('mikicoins').textContent = mikicoins;
 
         localStorage.setItem('user', user);
         localStorage.setItem('pass', pass);
