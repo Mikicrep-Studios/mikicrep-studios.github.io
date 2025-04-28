@@ -42,9 +42,21 @@
         </div>
         <hr>
         <h3>Link discord to account</h3>
-        <input type="text" class="logininput" id="captcha" placeholder="Verification code">
-        <button class="loginbutton" onclick="linkacc()"><a>Sumbit</a></button>
-        <p>Request verification code at <a href="/register.html">register</a> page, after you request it come back here to enter it</p>
+        <input type="text" class="logininput" id="sendcode" placeholder="Enter your Discord User ID">
+        <button class="loginbutton" onclick="sendcodelogin()">Request Code</button>
+        <p>To link your Discord account to your existing Mikicrep Studios account, first request a verification code using the form above. Once you receive the code, enter it below to complete the linking process.</p>
+        <input type="text" class="logininput" id="captcha" placeholder="Enter verification code">
+        <button class="loginbutton" onclick="linkacc()">Link Account</button>
+        <br><br>
+
+        <div class="container">
+            <div class="notification">
+            <p>If you want to link your Discord account to your existing Mikicrep Studios account, you need a verification code sent by our bot.</p>
+            <p>Ensure your Discord direct messages (DMs) are open. If needed, send a DM to the Mikicrep Studios bot to enable communication.</p>
+            <p>Make sure you are a member of our <a href="https://discord.gg/DdaGyeWp9U">Discord server</a> to receive the code.</p>
+            <p>If you don't know how to find your Discord User ID, follow <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID" target="_blank">this guide</a>.</p>
+            </div>
+        </div>
 
         <br>
         <hr>
