@@ -60,6 +60,30 @@ function sumbit() {
   location.reload(true);
 }
 
+// This function is called when the user clicks the "Generate token" button
+function generateToken() {
+  const user = document.getElementById('user').value.toLowerCase();
+  const pass = document.getElementById('pass').value;
+  const passhash = CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
+
+  const url = `${apiSite}generatetoken/${user}/${passhash}`;
+
+  // Use fetch to make a request to the server
+  fetch(url)
+    .then(response => response.json())  // Parse the response as JSON
+    .then(data => {
+      console.log("Response received:", data);  // Log the full response
+
+      // Display the message in the paragraph with id 'accresult'
+      document.getElementById('accresult').textContent = data.token;
+    })
+    .catch(error => {
+      console.error("Error occurred:", error);
+      document.getElementById('accresult').textContent = "An error occurred while processing the data.";
+    });
+}
+
+// This function is called when the user clicks the "Link Account" button
 function linkacc() {
   const user = document.getElementById('user').value.toLowerCase();
   const pass = document.getElementById('pass').value;
