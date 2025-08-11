@@ -17,6 +17,9 @@ window.addEventListener('message', function(event) {
     if (event.data === 'register') {
         window.location.href = '/register.html';
     }
+    if (event.data === 'search') {
+        window.location.href = '/search.html';
+    }
 });
 
 var apiSite = "https://miki.applism.ca/"
