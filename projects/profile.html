@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/css/css.css">
+        <title>Mikicrep Studios | </title>
+        <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.ico">
+    </head>
+    <body>
+        <iframe src="/statusbar.html" scrolling="no" class="statusbariframe"></iframe>
+        <h3>Mikicrep Studios - Profile</h3>
+        <h4>This page will fetch profile of someone using public id</h4>
+        <hr>
+        <div class="container">
+            <div class="notification">
+                <p id="result">Fetching...</p>
+            </div>
+        </div>
+        
+        <hr>
+        <button><a href="javascript:history.back()">Go Back</a></button>
+        <br>
+        <iframe src="/footer.html" scrolling="no" class="footeriframe"></iframe>
+
+        <script src="/global.js"></script>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const user = params.get("user");
+
+            if (!user) {
+                document.getElementById("result").textContent = "No user specified!";
+            } else {
+                const url = `${apiSite}profile/${user}`;
+                
+                fetch(url)
+                    .then(response => response.json()) // Parse as JSON
+                    .then(data => {
+                        console.log("Response received:", data); // Debug log
+                        document.getElementById("result").textContent =
+                            `Name: ${data.username}\nDescription: ${data.description}`;
+                    })
+                    .catch(error => {
+                        console.error("Error occurred:", error);
+                        document.getElementById("result").textContent =
+                            "An error occurred while processing the data.";
+                    });
+            }
+        </script>
+    </body>
+</html>

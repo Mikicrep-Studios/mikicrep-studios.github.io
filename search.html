@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/css/css.css">
+        <title>Mikicrep Studios | Search</title>
+		<link rel="icon" type="image/x-icon" href="/assets/pics/favicon.ico">
+    </head>
+    <body>
+	    <iframe src="/statusbar.html" scrolling="no" class="statusbariframe"></iframe>
+        <h3>Mikicrep Studios - Search</h3>
+        <h4>Here you can search for someone</h4>
+        <hr>
+        <input type="text" id="searchInput" placeholder="Enter public ID of user">
+        <button class="loginbutton" id="searchButton" onclick="search()">Search</button>
+        <br><br>
+        <hr>
+        <br>
+		<iframe src="/footer.html" scrolling="no" class="footeriframe"></iframe>
+        <script src="/global.js"></script>
+        <script>
+            function search() {
+                const input = document.getElementById("searchInput").value.trim();
+                if (input) {
+                    const url = `/projects/profile.html?user=${encodeURIComponent(input)}`;
+                    window.location.href = url;
+                } else {
+                    alert("Please enter a valid public ID.");
+                }
+            }
+        </script>
+	</body>
+</html>
