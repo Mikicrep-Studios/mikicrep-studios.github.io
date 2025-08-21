@@ -2,6 +2,7 @@
 
 const projects = [
     { title: "Archived projects:", items: [
+        { name: "Neofetch", link: "/projects/neofetch.html", description: "CLI tool" },
         { name: "Mikicraft", link: "/projects/mikicraft.html", description: "Minecraft Server" },
         { name: "SCRG", link: "/projects/scrg.html", description: "Game" },
         { name: "Miki#", link: "/projects/mikis.html", description: "Programming language" },
