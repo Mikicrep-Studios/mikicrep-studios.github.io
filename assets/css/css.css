@@ -27,6 +27,7 @@ a {
     transition: all 250ms ease-in-out;
     color: #F8EAAA;
     text-decoration:none;
+    display:block;
 }
 a:visited {
     transition: all 250ms ease-in-out;
