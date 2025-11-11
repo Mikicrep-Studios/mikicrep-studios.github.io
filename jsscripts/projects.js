@@ -42,28 +42,27 @@ function createProjects() {
         if (categoryIndex === 0) {
             projectsDiv.appendChild(document.createElement("hr"));
         }
-    });
-}
+        });
+    }
 
-// Helper function to create a project element
-function createProjectElement(href, title, description) {
-    const field = document.createElement("div");
-    field.className = "fullfieldcompact";
+    // Helper function to create a project element
+    function createProjectElement(href, title, description) {
+        const field = document.createElement("div");
+        field.className = "fullfieldcompact";
+        field.style.cursor = "pointer";
+        field.addEventListener("click", () => window.location.href = href);
 
-    const projectTitle = document.createElement("h3");
-    const projectLink = document.createElement("a");
-    projectLink.href = href;
-    projectLink.textContent = title;
-    projectTitle.appendChild(projectLink);
+        const projectTitle = document.createElement("h3");
+        projectTitle.textContent = title;
 
-    const projectDescription = document.createElement("p");
-    projectDescription.textContent = description;
+        const projectDescription = document.createElement("p");
+        projectDescription.textContent = description;
 
-    field.appendChild(projectTitle);
-    field.appendChild(projectDescription);
+        field.appendChild(projectTitle);
+        field.appendChild(projectDescription);
 
-    return field;
-}
+        return field;
+    }
 
-// Call the function to create and display projects when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", createProjects);
+    // Call the function to create and display projects when the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", createProjects);
